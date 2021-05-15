@@ -60,7 +60,7 @@
 		BA0B34E2264FA4F800774AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAD32BE2264FC50B00DD7824 /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		BAD32BFC264FC63100DD7824 /* TransNotionDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransNotionDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAD32C20264FC6E600DD7824 /* GoogleService-Dev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Dev-Info.plist"; sourceTree = "<group>"; };
+		BAD32C20264FC6E600DD7824 /* GoogleService-Info-dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-dev.plist"; sourceTree = "<group>"; };
 		BAD32C26264FC96000DD7824 /* Secret.swift.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Secret.swift.sample; sourceTree = "<group>"; };
 		BAD32C4C264FDDAB00DD7824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				BA0B34CC264FA4F800774AA0 /* Info.plist */,
-				BAD32C20264FC6E600DD7824 /* GoogleService-Dev-Info.plist */,
+				BAD32C20264FC6E600DD7824 /* GoogleService-Info-dev.plist */,
 				BAD32BE2264FC50B00DD7824 /* Secret.swift */,
 				BAD32C26264FC96000DD7824 /* Secret.swift.sample */,
 				BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */,
