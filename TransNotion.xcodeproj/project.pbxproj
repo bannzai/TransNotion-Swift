@@ -14,18 +14,12 @@
 		BA0B34D6264FA4F800774AA0 /* TransNotionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34D5264FA4F800774AA0 /* TransNotionTests.swift */; };
 		BA0B34E1264FA4F800774AA0 /* TransNotionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34E0264FA4F800774AA0 /* TransNotionUITests.swift */; };
 		BAD32BE3264FC50B00DD7824 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD32BE2264FC50B00DD7824 /* Secret.swift */; };
-		BAD32BF2264FC63100DD7824 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C5264FA4F100774AA0 /* ContentView.swift */; };
-		BAD32BF3264FC63100DD7824 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD32BE2264FC50B00DD7824 /* Secret.swift */; };
-		BAD32BF4264FC63100DD7824 /* TransNotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */; };
-		BAD32BF7264FC63100DD7824 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0B34CA264FA4F800774AA0 /* Preview Assets.xcassets */; };
-		BAD32BF8264FC63100DD7824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0B34C7264FA4F800774AA0 /* Assets.xcassets */; };
 		BAD32C3F264FCE5C00DD7824 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = BAD32C3E264FCE5C00DD7824 /* FirebaseFirestoreSwift-Beta */; };
 		BAD32C41264FCE5C00DD7824 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = BAD32C40264FCE5C00DD7824 /* FirebaseCrashlytics */; };
 		BAD32C43264FCE5C00DD7824 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BAD32C42264FCE5C00DD7824 /* FirebaseAuth */; };
 		BAD32C45264FCE5C00DD7824 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = BAD32C44264FCE5C00DD7824 /* FirebaseAnalyticsSwift-Beta */; };
 		BAD32C47264FCE5C00DD7824 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BAD32C46264FCE5C00DD7824 /* FirebaseFirestore */; };
 		BAD32C4D264FDDAB00DD7824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD32C4C264FDDAB00DD7824 /* AppDelegate.swift */; };
-		BAD32C52264FDDD800DD7824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD32C4C264FDDAB00DD7824 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +53,6 @@
 		BA0B34E0264FA4F800774AA0 /* TransNotionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransNotionUITests.swift; sourceTree = "<group>"; };
 		BA0B34E2264FA4F800774AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAD32BE2264FC50B00DD7824 /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
-		BAD32BFC264FC63100DD7824 /* TransNotionDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransNotionDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD32C20264FC6E600DD7824 /* GoogleService-Info-dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-dev.plist"; sourceTree = "<group>"; };
 		BAD32C26264FC96000DD7824 /* Secret.swift.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Secret.swift.sample; sourceTree = "<group>"; };
 		BAD32C4C264FDDAB00DD7824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,13 +85,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAD32BF5264FC63100DD7824 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -118,7 +104,6 @@
 				BA0B34C0264FA4F100774AA0 /* TransNotion.app */,
 				BA0B34D1264FA4F800774AA0 /* TransNotionTests.xctest */,
 				BA0B34DC264FA4F800774AA0 /* TransNotionUITests.xctest */,
-				BAD32BFC264FC63100DD7824 /* TransNotionDev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,23 +213,6 @@
 			productReference = BA0B34DC264FA4F800774AA0 /* TransNotionUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		BAD32BF0264FC63100DD7824 /* TransNotionDev */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BAD32BF9264FC63100DD7824 /* Build configuration list for PBXNativeTarget "TransNotionDev" */;
-			buildPhases = (
-				BAD32BF1264FC63100DD7824 /* Sources */,
-				BAD32BF5264FC63100DD7824 /* Frameworks */,
-				BAD32BF6264FC63100DD7824 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TransNotionDev;
-			productName = TransNotion;
-			productReference = BAD32BFC264FC63100DD7824 /* TransNotionDev.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -284,7 +252,6 @@
 			projectRoot = "";
 			targets = (
 				BA0B34BF264FA4F100774AA0 /* TransNotion */,
-				BAD32BF0264FC63100DD7824 /* TransNotionDev */,
 				BA0B34D0264FA4F800774AA0 /* TransNotionTests */,
 				BA0B34DB264FA4F800774AA0 /* TransNotionUITests */,
 			);
@@ -315,15 +282,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAD32BF6264FC63100DD7824 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BAD32BF7264FC63100DD7824 /* Preview Assets.xcassets in Resources */,
-				BAD32BF8264FC63100DD7824 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -351,17 +309,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA0B34E1264FA4F800774AA0 /* TransNotionUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAD32BF1264FC63100DD7824 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BAD32C52264FDDD800DD7824 /* AppDelegate.swift in Sources */,
-				BAD32BF2264FC63100DD7824 /* ContentView.swift in Sources */,
-				BAD32BF3264FC63100DD7824 /* Secret.swift in Sources */,
-				BAD32BF4264FC63100DD7824 /* TransNotionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,50 +572,6 @@
 			};
 			name = Release;
 		};
-		BAD32BFA264FC63100DD7824 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"TransNotion/Preview Content\"";
-				DEVELOPMENT_TEAM = TQPN82UBBY;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "TransNotion copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bannzai.transnotion-dev";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		BAD32BFB264FC63100DD7824 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"TransNotion/Preview Content\"";
-				DEVELOPMENT_TEAM = TQPN82UBBY;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "TransNotion copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bannzai.transnotion-dev";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -704,15 +607,6 @@
 			buildConfigurations = (
 				BA0B34EC264FA4F800774AA0 /* Debug */,
 				BA0B34ED264FA4F800774AA0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BAD32BF9264FC63100DD7824 /* Build configuration list for PBXNativeTarget "TransNotionDev" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BAD32BFA264FC63100DD7824 /* Debug */,
-				BAD32BFB264FC63100DD7824 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

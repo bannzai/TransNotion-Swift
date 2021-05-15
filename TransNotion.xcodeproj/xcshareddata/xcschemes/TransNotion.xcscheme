@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BAD32BF0264FC63100DD7824"
-               BuildableName = "TransNotionDev.app"
-               BlueprintName = "TransNotionDev"
+               BlueprintIdentifier = "BA0B34BF264FA4F100774AA0"
+               BuildableName = "TransNotion.app"
+               BlueprintName = "TransNotion"
                ReferencedContainer = "container:TransNotion.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BAD32BF0264FC63100DD7824"
-            BuildableName = "TransNotionDev.app"
-            BlueprintName = "TransNotionDev"
+            BlueprintIdentifier = "BA0B34BF264FA4F100774AA0"
+            BuildableName = "TransNotion.app"
+            BlueprintName = "TransNotion"
             ReferencedContainer = "container:TransNotion.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BAD32BF0264FC63100DD7824"
-            BuildableName = "TransNotionDev.app"
-            BlueprintName = "TransNotionDev"
+            BlueprintIdentifier = "BA0B34BF264FA4F100774AA0"
+            BuildableName = "TransNotion.app"
+            BlueprintName = "TransNotion"
             ReferencedContainer = "container:TransNotion.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
