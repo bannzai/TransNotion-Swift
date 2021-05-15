@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct TransNotionApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) private var delegate
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
 
     var body: some Scene {
         WindowGroup {
