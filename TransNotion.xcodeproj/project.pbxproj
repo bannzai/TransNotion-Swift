@@ -23,6 +23,7 @@
 		BACEC6D3264FF5030070D31B /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6CD264FF5020070D31B /* Auth.swift */; };
 		BACEC6DA264FF54B0070D31B /* Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6D8264FF54B0070D31B /* Me.swift */; };
 		BACEC6DB264FF54B0070D31B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6D9264FF54B0070D31B /* User.swift */; };
+		BACEC6E1264FF7EB0070D31B /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6E0264FF7EB0070D31B /* Color+Extension.swift */; };
 		BAD32BE3264FC50B00DD7824 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD32BE2264FC50B00DD7824 /* Secret.swift */; };
 		BAD32C3F264FCE5C00DD7824 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = BAD32C3E264FCE5C00DD7824 /* FirebaseFirestoreSwift-Beta */; };
 		BAD32C41264FCE5C00DD7824 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = BAD32C40264FCE5C00DD7824 /* FirebaseCrashlytics */; };
@@ -72,6 +73,7 @@
 		BACEC6CD264FF5020070D31B /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		BACEC6D8264FF54B0070D31B /* Me.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Me.swift; sourceTree = "<group>"; };
 		BACEC6D9264FF54B0070D31B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BACEC6E0264FF7EB0070D31B /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		BAD32BE2264FC50B00DD7824 /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		BAD32C20264FC6E600DD7824 /* GoogleService-Info-dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-dev.plist"; sourceTree = "<group>"; };
 		BAD32C26264FC96000DD7824 /* Secret.swift.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Secret.swift.sample; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		BA0B34C2264FA4F100774AA0 /* TransNotion */ = {
 			isa = PBXGroup;
 			children = (
+				BACEC6DF264FF7E10070D31B /* Style */,
 				BACEC6D7264FF53A0070D31B /* Entity */,
 				BACEC6C6264FF4ED0070D31B /* Service */,
 				BA0B34CC264FA4F800774AA0 /* Info.plist */,
@@ -202,6 +205,14 @@
 				BACEC6D9264FF54B0070D31B /* User.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		BACEC6DF264FF7E10070D31B /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				BACEC6E0264FF7EB0070D31B /* Color+Extension.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BACEC6C2264FF4B90070D31B /* LoginView.swift in Sources */,
+				BACEC6E1264FF7EB0070D31B /* Color+Extension.swift in Sources */,
 				BACEC6D2264FF5030070D31B /* Database.swift in Sources */,
 				BACEC6CF264FF5030070D31B /* DatabaseEntity.swift in Sources */,
 				BACEC6D0264FF5030070D31B /* DocumentReference+Combine.swift in Sources */,
