@@ -2,3 +2,4 @@
 Secret.swift
 GoogleService-Info.plist
 GoogleService*.plist
+*-Secret.xcconfig
