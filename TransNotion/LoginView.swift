@@ -9,7 +9,22 @@ import SwiftUI
 
 struct LoginView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.background
+
+            VStack {
+                Button(action: {
+                    
+                }, label: {
+                    HStack {
+                        Image("notion_icon")
+                            .resizable()
+                        Text("Login with Notion")
+                    }
+                    .frame()
+                })
+            }
+        }
     }
 }
 
