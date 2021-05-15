@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     var body: some View {
         ZStack {
-            Color.background
+            Color.background.edgesIgnoringSafeArea(.all)
 
             VStack {
                 Button(action: {
@@ -19,9 +19,12 @@ struct LoginView: View {
                     HStack {
                         Image("notion_icon")
                             .resizable()
-                        Text()
+                            .frame(width: 32, height: 32)
+                        Text("Login with Notion")
+                            .foregroundColor(.black)
                     }
-                    .frame()
+                    .frame(width: 240, height: 44)
+                    .background(Color.white)
                 })
             }
         }
