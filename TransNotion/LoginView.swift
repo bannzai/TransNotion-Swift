@@ -19,7 +19,7 @@ struct LoginView: View {
                     HStack {
                         Image("notion_icon")
                             .resizable()
-                        Text("Login with Notion")
+                        Text()
                     }
                     .frame()
                 })
