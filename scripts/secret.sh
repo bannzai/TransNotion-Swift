@@ -2,16 +2,16 @@
 set -eu
 set -o pipefail
 
-PWD=`dirname $0`
-SECRET_PATH=$PWD/../TransNotion
+SECRET_FILE_PATH=`dirname $0`/../TransNotion
+cd $SECRET_FILE_PATH
 
-set +e
-cp -i $SECRET_PATH/Secret.swift.sample $SECRET_PATH/Secret.swift
-set -e
+echo $(pwd -P)
 
-printf 'Start to replace from NOTION_OAUTH_CLIENT_ID, NOTION_OAUTH_REDIRECT_URI\n'
+cp -i Secret.swift.sample Secret.swift
 
-sed -i '' -e "s;NOTION_OAUTH_CLIENT_ID;$NOTION_OAUTH_CLIENT_ID;" $SECRET_PATH/Secret.swift
-sed -i '' -e "s;NOTION_OAUTH_REDIRECT_URI;$NOTION_OAUTH_REDIRECT_URI;" $SECRET_PATH/Secret.swift
+echo 'Start to replace from NOTION_OAUTH_CLIENT_ID, NOTION_OAUTH_REDIRECT_URI'
 
-printf 'Done to replace from NOTION_OAUTH_CLIENT_ID, NOTION_OAUTH_REDIRECT_URI\n'
+sed -i '' -e "s;NOTION_OAUTH_CLIENT_ID;$NOTION_OAUTH_CLIENT_ID;" Secret.swift
+sed -i '' -e "s;NOTION_OAUTH_REDIRECT_URI;$NOTION_OAUTH_REDIRECT_URI;" Secret.swift
+
+echo 'Done to replace from NOTION_OAUTH_CLIENT_ID, NOTION_OAUTH_REDIRECT_URI'
