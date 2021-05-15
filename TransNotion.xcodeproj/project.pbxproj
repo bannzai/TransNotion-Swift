@@ -15,6 +15,14 @@
 		BA0B34E1264FA4F800774AA0 /* TransNotionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34E0264FA4F800774AA0 /* TransNotionUITests.swift */; };
 		BACEC6BD264FF4AC0070D31B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6BC264FF4AC0070D31B /* ContentView.swift */; };
 		BACEC6C2264FF4B90070D31B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6C1264FF4B90070D31B /* LoginView.swift */; };
+		BACEC6CE264FF5030070D31B /* DatabasePathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6C8264FF5020070D31B /* DatabasePathBuilder.swift */; };
+		BACEC6CF264FF5030070D31B /* DatabaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6C9264FF5020070D31B /* DatabaseEntity.swift */; };
+		BACEC6D0264FF5030070D31B /* DocumentReference+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6CA264FF5020070D31B /* DocumentReference+Combine.swift */; };
+		BACEC6D1264FF5030070D31B /* CollectionReference+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6CB264FF5020070D31B /* CollectionReference+Combine.swift */; };
+		BACEC6D2264FF5030070D31B /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6CC264FF5020070D31B /* Database.swift */; };
+		BACEC6D3264FF5030070D31B /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6CD264FF5020070D31B /* Auth.swift */; };
+		BACEC6DA264FF54B0070D31B /* Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6D8264FF54B0070D31B /* Me.swift */; };
+		BACEC6DB264FF54B0070D31B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6D9264FF54B0070D31B /* User.swift */; };
 		BAD32BE3264FC50B00DD7824 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD32BE2264FC50B00DD7824 /* Secret.swift */; };
 		BAD32C3F264FCE5C00DD7824 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = BAD32C3E264FCE5C00DD7824 /* FirebaseFirestoreSwift-Beta */; };
 		BAD32C41264FCE5C00DD7824 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = BAD32C40264FCE5C00DD7824 /* FirebaseCrashlytics */; };
@@ -56,6 +64,14 @@
 		BA0B34E2264FA4F800774AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BACEC6BC264FF4AC0070D31B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BACEC6C1264FF4B90070D31B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BACEC6C8264FF5020070D31B /* DatabasePathBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabasePathBuilder.swift; sourceTree = "<group>"; };
+		BACEC6C9264FF5020070D31B /* DatabaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseEntity.swift; sourceTree = "<group>"; };
+		BACEC6CA264FF5020070D31B /* DocumentReference+Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DocumentReference+Combine.swift"; sourceTree = "<group>"; };
+		BACEC6CB264FF5020070D31B /* CollectionReference+Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionReference+Combine.swift"; sourceTree = "<group>"; };
+		BACEC6CC264FF5020070D31B /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		BACEC6CD264FF5020070D31B /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		BACEC6D8264FF54B0070D31B /* Me.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Me.swift; sourceTree = "<group>"; };
+		BACEC6D9264FF54B0070D31B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BAD32BE2264FC50B00DD7824 /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		BAD32C20264FC6E600DD7824 /* GoogleService-Info-dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-dev.plist"; sourceTree = "<group>"; };
 		BAD32C26264FC96000DD7824 /* Secret.swift.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Secret.swift.sample; sourceTree = "<group>"; };
@@ -115,6 +131,8 @@
 		BA0B34C2264FA4F100774AA0 /* TransNotion */ = {
 			isa = PBXGroup;
 			children = (
+				BACEC6D7264FF53A0070D31B /* Entity */,
+				BACEC6C6264FF4ED0070D31B /* Service */,
 				BA0B34CC264FA4F800774AA0 /* Info.plist */,
 				BAD32C20264FC6E600DD7824 /* GoogleService-Info-dev.plist */,
 				BAD32BE2264FC50B00DD7824 /* Secret.swift */,
@@ -154,6 +172,36 @@
 				BA0B34E2264FA4F800774AA0 /* Info.plist */,
 			);
 			path = TransNotionUITests;
+			sourceTree = "<group>";
+		};
+		BACEC6C6264FF4ED0070D31B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BACEC6CD264FF5020070D31B /* Auth.swift */,
+				BACEC6C7264FF5020070D31B /* Database */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BACEC6C7264FF5020070D31B /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				BACEC6C8264FF5020070D31B /* DatabasePathBuilder.swift */,
+				BACEC6C9264FF5020070D31B /* DatabaseEntity.swift */,
+				BACEC6CA264FF5020070D31B /* DocumentReference+Combine.swift */,
+				BACEC6CB264FF5020070D31B /* CollectionReference+Combine.swift */,
+				BACEC6CC264FF5020070D31B /* Database.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		BACEC6D7264FF53A0070D31B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				BACEC6D8264FF54B0070D31B /* Me.swift */,
+				BACEC6D9264FF54B0070D31B /* User.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,11 +344,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BACEC6C2264FF4B90070D31B /* LoginView.swift in Sources */,
+				BACEC6D2264FF5030070D31B /* Database.swift in Sources */,
+				BACEC6CF264FF5030070D31B /* DatabaseEntity.swift in Sources */,
+				BACEC6D0264FF5030070D31B /* DocumentReference+Combine.swift in Sources */,
 				BAD32C4D264FDDAB00DD7824 /* AppDelegate.swift in Sources */,
 				BACEC6BD264FF4AC0070D31B /* ContentView.swift in Sources */,
+				BACEC6DB264FF54B0070D31B /* User.swift in Sources */,
+				BACEC6CE264FF5030070D31B /* DatabasePathBuilder.swift in Sources */,
 				BA0B34C6264FA4F100774AA0 /* RootView.swift in Sources */,
+				BACEC6D1264FF5030070D31B /* CollectionReference+Combine.swift in Sources */,
+				BACEC6DA264FF54B0070D31B /* Me.swift in Sources */,
 				BAD32BE3264FC50B00DD7824 /* Secret.swift in Sources */,
 				BA0B34C4264FA4F100774AA0 /* TransNotionApp.swift in Sources */,
+				BACEC6D3264FF5030070D31B /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
