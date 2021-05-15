@@ -13,6 +13,7 @@ struct LoginView: View {
             Color.background.edgesIgnoringSafeArea(.all)
 
             VStack {
+                Text("TransNotion").font(.title).foregroundColor(.textColor)
                 Button(action: {
                     
                 }, label: {
@@ -25,6 +26,7 @@ struct LoginView: View {
                     }
                     .frame(width: 240, height: 44)
                     .background(Color.white)
+                    .cornerRadius(4)
                 })
             }
         }
