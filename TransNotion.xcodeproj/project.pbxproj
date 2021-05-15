@@ -19,9 +19,6 @@
 		BAD32BF4264FC63100DD7824 /* TransNotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */; };
 		BAD32BF7264FC63100DD7824 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0B34CA264FA4F800774AA0 /* Preview Assets.xcassets */; };
 		BAD32BF8264FC63100DD7824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0B34C7264FA4F800774AA0 /* Assets.xcassets */; };
-		BAD32C14264FC68F00DD7824 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAD32C0A264FC68B00DD7824 /* Info.plist */; };
-		BAD32C19264FC69300DD7824 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA0B34CC264FA4F800774AA0 /* Info.plist */; };
-		BAD32C21264FC6E600DD7824 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAD32C20264FC6E600DD7824 /* GoogleService-Info.plist */; };
 		BAD32C3F264FCE5C00DD7824 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = BAD32C3E264FCE5C00DD7824 /* FirebaseFirestoreSwift-Beta */; };
 		BAD32C41264FCE5C00DD7824 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = BAD32C40264FCE5C00DD7824 /* FirebaseCrashlytics */; };
 		BAD32C43264FCE5C00DD7824 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BAD32C42264FCE5C00DD7824 /* FirebaseAuth */; };
@@ -63,8 +60,7 @@
 		BA0B34E2264FA4F800774AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAD32BE2264FC50B00DD7824 /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		BAD32BFC264FC63100DD7824 /* TransNotionDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransNotionDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAD32C0A264FC68B00DD7824 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAD32C20264FC6E600DD7824 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BAD32C20264FC6E600DD7824 /* GoogleService-Dev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Dev-Info.plist"; sourceTree = "<group>"; };
 		BAD32C26264FC96000DD7824 /* Secret.swift.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Secret.swift.sample; sourceTree = "<group>"; };
 		BAD32C4C264FDDAB00DD7824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,8 +126,8 @@
 		BA0B34C2264FA4F100774AA0 /* TransNotion */ = {
 			isa = PBXGroup;
 			children = (
-				BAD32C1F264FC6BC00DD7824 /* Prod */,
-				BAD32C1E264FC6B900DD7824 /* Dev */,
+				BA0B34CC264FA4F800774AA0 /* Info.plist */,
+				BAD32C20264FC6E600DD7824 /* GoogleService-Dev-Info.plist */,
 				BAD32BE2264FC50B00DD7824 /* Secret.swift */,
 				BAD32C26264FC96000DD7824 /* Secret.swift.sample */,
 				BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */,
@@ -167,23 +163,6 @@
 				BA0B34E2264FA4F800774AA0 /* Info.plist */,
 			);
 			path = TransNotionUITests;
-			sourceTree = "<group>";
-		};
-		BAD32C1E264FC6B900DD7824 /* Dev */ = {
-			isa = PBXGroup;
-			children = (
-				BAD32C0A264FC68B00DD7824 /* Info.plist */,
-				BAD32C20264FC6E600DD7824 /* GoogleService-Info.plist */,
-			);
-			path = Dev;
-			sourceTree = "<group>";
-		};
-		BAD32C1F264FC6BC00DD7824 /* Prod */ = {
-			isa = PBXGroup;
-			children = (
-				BA0B34CC264FA4F800774AA0 /* Info.plist */,
-			);
-			path = Prod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,7 +298,6 @@
 			files = (
 				BA0B34CB264FA4F800774AA0 /* Preview Assets.xcassets in Resources */,
 				BA0B34C8264FA4F800774AA0 /* Assets.xcassets in Resources */,
-				BAD32C19264FC69300DD7824 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD32BF7264FC63100DD7824 /* Preview Assets.xcassets in Resources */,
-				BAD32C21264FC6E600DD7824 /* GoogleService-Info.plist in Resources */,
 				BAD32BF8264FC63100DD7824 /* Assets.xcassets in Resources */,
-				BAD32C14264FC68F00DD7824 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
