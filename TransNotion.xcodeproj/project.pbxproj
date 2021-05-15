@@ -13,6 +13,7 @@
 		BA0B34CB264FA4F800774AA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0B34CA264FA4F800774AA0 /* Preview Assets.xcassets */; };
 		BA0B34D6264FA4F800774AA0 /* TransNotionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34D5264FA4F800774AA0 /* TransNotionTests.swift */; };
 		BA0B34E1264FA4F800774AA0 /* TransNotionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34E0264FA4F800774AA0 /* TransNotionUITests.swift */; };
+		BACEC6BD264FF4AC0070D31B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEC6BC264FF4AC0070D31B /* ContentView.swift */; };
 		BAD32BE3264FC50B00DD7824 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD32BE2264FC50B00DD7824 /* Secret.swift */; };
 		BAD32C3F264FCE5C00DD7824 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = BAD32C3E264FCE5C00DD7824 /* FirebaseFirestoreSwift-Beta */; };
 		BAD32C41264FCE5C00DD7824 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = BAD32C40264FCE5C00DD7824 /* FirebaseCrashlytics */; };
@@ -52,6 +53,7 @@
 		BA0B34DC264FA4F800774AA0 /* TransNotionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransNotionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0B34E0264FA4F800774AA0 /* TransNotionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransNotionUITests.swift; sourceTree = "<group>"; };
 		BA0B34E2264FA4F800774AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BACEC6BC264FF4AC0070D31B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BAD32BE2264FC50B00DD7824 /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		BAD32C20264FC6E600DD7824 /* GoogleService-Info-dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-dev.plist"; sourceTree = "<group>"; };
 		BAD32C26264FC96000DD7824 /* Secret.swift.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Secret.swift.sample; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */,
 				BAD32C4C264FDDAB00DD7824 /* AppDelegate.swift */,
 				BA0B34C5264FA4F100774AA0 /* RootView.swift */,
+				BACEC6BC264FF4AC0070D31B /* ContentView.swift */,
 				BA0B34C7264FA4F800774AA0 /* Assets.xcassets */,
 				BA0B34C9264FA4F800774AA0 /* Preview Content */,
 			);
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD32C4D264FDDAB00DD7824 /* AppDelegate.swift in Sources */,
+				BACEC6BD264FF4AC0070D31B /* ContentView.swift in Sources */,
 				BA0B34C6264FA4F100774AA0 /* RootView.swift in Sources */,
 				BAD32BE3264FC50B00DD7824 /* Secret.swift in Sources */,
 				BA0B34C4264FA4F100774AA0 /* TransNotionApp.swift in Sources */,
