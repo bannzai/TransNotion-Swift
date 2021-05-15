@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA00718D26508564001DFFCB /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718926508564001DFFCB /* Debug.xcconfig */; };
+		BA00718E26508564001DFFCB /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718A26508564001DFFCB /* Release.xcconfig */; };
+		BA00718F26508564001DFFCB /* Debug-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718B26508564001DFFCB /* Debug-Secret.xcconfig */; };
+		BA00719026508564001DFFCB /* Release-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718C26508564001DFFCB /* Release-Secret.xcconfig */; };
 		BA0B34C4264FA4F100774AA0 /* TransNotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */; };
 		BA0B34C6264FA4F100774AA0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C5264FA4F100774AA0 /* RootView.swift */; };
 		BA0B34C8264FA4F800774AA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0B34C7264FA4F800774AA0 /* Assets.xcassets */; };
@@ -52,6 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA00718926508564001DFFCB /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		BA00718A26508564001DFFCB /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		BA00718B26508564001DFFCB /* Debug-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Debug-Secret.xcconfig"; sourceTree = "<group>"; };
+		BA00718C26508564001DFFCB /* Release-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Release-Secret.xcconfig"; sourceTree = "<group>"; };
 		BA0B34C0264FA4F100774AA0 /* TransNotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransNotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransNotionApp.swift; sourceTree = "<group>"; };
 		BA0B34C5264FA4F100774AA0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -149,6 +157,10 @@
 				BACEC6BC264FF4AC0070D31B /* ContentView.swift */,
 				BACEC6C1264FF4B90070D31B /* LoginView.swift */,
 				BA0B34C7264FA4F800774AA0 /* Assets.xcassets */,
+				BA00718B26508564001DFFCB /* Debug-Secret.xcconfig */,
+				BA00718926508564001DFFCB /* Debug.xcconfig */,
+				BA00718C26508564001DFFCB /* Release-Secret.xcconfig */,
+				BA00718A26508564001DFFCB /* Release.xcconfig */,
 				BA0B34C9264FA4F800774AA0 /* Preview Content */,
 				BACEC6F1264FF9430070D31B /* Localizable.strings */,
 			);
@@ -333,9 +345,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA00718D26508564001DFFCB /* Debug.xcconfig in Resources */,
 				BA0B34CB264FA4F800774AA0 /* Preview Assets.xcassets in Resources */,
 				BACEC6EF264FF9430070D31B /* Localizable.strings in Resources */,
 				BA0B34C8264FA4F800774AA0 /* Assets.xcassets in Resources */,
+				BA00718F26508564001DFFCB /* Debug-Secret.xcconfig in Resources */,
+				BA00719026508564001DFFCB /* Release-Secret.xcconfig in Resources */,
+				BA00718E26508564001DFFCB /* Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +440,7 @@
 /* Begin XCBuildConfiguration section */
 		BA0B34E3264FA4F800774AA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA00718926508564001DFFCB /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -486,6 +503,7 @@
 		};
 		BA0B34E4264FA4F800774AA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA00718A26508564001DFFCB /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
