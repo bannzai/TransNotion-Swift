@@ -11,12 +11,8 @@ protocol LocalStoreKey {
     static var localStoreKey: String { get }
 }
 
-extension LocalStoreKey where Self: Codable {
+extension LocalStoreKey {
     static var localStoreKey: String { "\(type(of: Self.self))" }
-}
-
-extension Array where Element: LocalStoreKey {
-    static var localStoreKey: String { "array_\(type(of: Element.self))" }
 }
 
 struct LocalStore<Coder: Codable & LocalStoreKey> {
@@ -39,4 +35,8 @@ struct LocalStore<Coder: Codable & LocalStoreKey> {
         let decoded = try JSONDecoder().decode(Coder.self, from: data)
         return decoded
     }
+}
+
+struct Credentials: Codable, LocalStoreKey {
+    var elements: [NotionOAuth.Credential]
 }
