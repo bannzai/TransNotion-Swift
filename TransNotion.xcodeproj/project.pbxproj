@@ -14,6 +14,7 @@
 		BA00719F2650886C001DFFCB /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00719E2650886C001DFFCB /* OAuth.swift */; };
 		BA0071A826509001001DFFCB /* Environment+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0071A726509001001DFFCB /* Environment+Window.swift */; };
 		BA0071E92650A401001DFFCB /* GoogleService-Info-dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAD32C20264FC6E600DD7824 /* GoogleService-Info-dev.plist */; };
+		BA0071F126511CFC001DFFCB /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0071F026511CFC001DFFCB /* LocalStore.swift */; };
 		BA0B34C4264FA4F100774AA0 /* TransNotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */; };
 		BA0B34C6264FA4F100774AA0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C5264FA4F100774AA0 /* RootView.swift */; };
 		BA0B34C8264FA4F800774AA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0B34C7264FA4F800774AA0 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		BA00718C26508564001DFFCB /* Release-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Release-Secret.xcconfig"; sourceTree = "<group>"; };
 		BA00719E2650886C001DFFCB /* OAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
 		BA0071A726509001001DFFCB /* Environment+Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+Window.swift"; sourceTree = "<group>"; };
+		BA0071F026511CFC001DFFCB /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		BA0B34C0264FA4F100774AA0 /* TransNotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransNotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransNotionApp.swift; sourceTree = "<group>"; };
 		BA0B34C5264FA4F100774AA0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -155,6 +157,14 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
+		BA0071EE26511CED001DFFCB /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				BA0071F026511CFC001DFFCB /* LocalStore.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
 		BA0B34B7264FA4F100774AA0 = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +250,7 @@
 		BACEC6C7264FF5020070D31B /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				BA0071EE26511CED001DFFCB /* Local */,
 				BA0071ED26511CDB001DFFCB /* Remote */,
 			);
 			path = Database;
@@ -408,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA0071F126511CFC001DFFCB /* LocalStore.swift in Sources */,
 				BACEC6C2264FF4B90070D31B /* LoginView.swift in Sources */,
 				BACEC6E1264FF7EB0070D31B /* Color+Extension.swift in Sources */,
 				BACEC6D2264FF5030070D31B /* Database.swift in Sources */,
