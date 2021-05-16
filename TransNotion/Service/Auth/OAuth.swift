@@ -52,7 +52,7 @@ extension NotionOAuth {
 
     func requestAuthentification() -> AnyPublisher<TemporaryAuthentificationCode, Swift.Error> {
         Future<URL, RequestAuthentificationError> { completion in
-            let session = ASWebAuthenticationSession(url: authorizeURL, callbackURLScheme: Secret.notionOAtuhCallbackCustomURLScheme) { (url, error) in
+            let session = ASWebAuthenticationSession(url: authorizeURL, callbackURLScheme: Secret.notionOAuthCallbackCustomURLScheme) { (url, error) in
                 if let error = error {
                     completion(.failure(.sessionError(error)))
                 } else if let url = url {
