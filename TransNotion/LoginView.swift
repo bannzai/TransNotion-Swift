@@ -40,10 +40,11 @@ struct LoginView: View {
 extension LoginView {
     class ViewModel: ObservableObject {
         @Environment(\.keyWindow) var keyWindow
-        @Published var credential: NotionOAuth.Credential?
+        @Published var credential: Credential?
         @Published var error: Error?
         var cancellables: [AnyCancellable] = []
-        
+        let localStore = LocalStore<Credentials>()
+
         func startNotionOAuth() {
             guard let window = keyWindow() else {
                 fatalError("unexpected window is not found")
@@ -67,6 +68,10 @@ extension LoginView {
                 })
                 .store(in: &cancellables)
         }
+    }
+
+    private func store(credential: Credential) {
+        
     }
 }
 

@@ -81,13 +81,6 @@ extension NotionOAuth {
         case notStableResponse
         case emptyData
     }
-    struct Credential: Codable {
-        let accessToken: String
-        let workspaceName: String
-        // NOTE: workspaceIcon is exists into document. But exactly not contains in response
-//        let workspaceIcon: String
-        let botId: String
-    }
     func requestCredential(code: TemporaryAuthentificationCode) -> AnyPublisher<Credential, Swift.Error> {
         var request = URLRequest(url: tokenURL)
         request.httpMethod = "POST"

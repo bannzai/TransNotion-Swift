@@ -15,6 +15,7 @@
 		BA0071A826509001001DFFCB /* Environment+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0071A726509001001DFFCB /* Environment+Window.swift */; };
 		BA0071E92650A401001DFFCB /* GoogleService-Info-dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAD32C20264FC6E600DD7824 /* GoogleService-Info-dev.plist */; };
 		BA0071F126511CFC001DFFCB /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0071F026511CFC001DFFCB /* LocalStore.swift */; };
+		BA0071FC26512C9C001DFFCB /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0071FB26512C9C001DFFCB /* Credential.swift */; };
 		BA0B34C4264FA4F100774AA0 /* TransNotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */; };
 		BA0B34C6264FA4F100774AA0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C5264FA4F100774AA0 /* RootView.swift */; };
 		BA0B34C8264FA4F800774AA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0B34C7264FA4F800774AA0 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		BA00719E2650886C001DFFCB /* OAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
 		BA0071A726509001001DFFCB /* Environment+Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+Window.swift"; sourceTree = "<group>"; };
 		BA0071F026511CFC001DFFCB /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
+		BA0071FB26512C9C001DFFCB /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		BA0B34C0264FA4F100774AA0 /* TransNotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransNotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransNotionApp.swift; sourceTree = "<group>"; };
 		BA0B34C5264FA4F100774AA0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			children = (
 				BACEC6D8264FF54B0070D31B /* Me.swift */,
 				BACEC6D9264FF54B0070D31B /* User.swift */,
+				BA0071FB26512C9C001DFFCB /* Credential.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				BAD32C4D264FDDAB00DD7824 /* AppDelegate.swift in Sources */,
 				BACEC6BD264FF4AC0070D31B /* ContentView.swift in Sources */,
 				BA00719F2650886C001DFFCB /* OAuth.swift in Sources */,
+				BA0071FC26512C9C001DFFCB /* Credential.swift in Sources */,
 				BACEC6DB264FF54B0070D31B /* User.swift in Sources */,
 				BACEC6CE264FF5030070D31B /* DatabasePathBuilder.swift in Sources */,
 				BA0B34C6264FA4F100774AA0 /* RootView.swift in Sources */,

@@ -36,7 +36,3 @@ struct LocalStore<Coder: Codable & LocalStoreKey> {
         return decoded
     }
 }
-
-struct Credentials: Codable, LocalStoreKey {
-    var elements: [NotionOAuth.Credential]
-}
