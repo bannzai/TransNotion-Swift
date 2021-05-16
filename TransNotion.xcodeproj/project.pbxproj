@@ -143,6 +143,18 @@
 			path = Environment;
 			sourceTree = "<group>";
 		};
+		BA0071ED26511CDB001DFFCB /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				BACEC6C8264FF5020070D31B /* DatabasePathBuilder.swift */,
+				BACEC6C9264FF5020070D31B /* DatabaseEntity.swift */,
+				BACEC6CA264FF5020070D31B /* DocumentReference+Combine.swift */,
+				BACEC6CB264FF5020070D31B /* CollectionReference+Combine.swift */,
+				BACEC6CC264FF5020070D31B /* Database.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
 		BA0B34B7264FA4F100774AA0 = {
 			isa = PBXGroup;
 			children = (
@@ -228,11 +240,7 @@
 		BACEC6C7264FF5020070D31B /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				BACEC6C8264FF5020070D31B /* DatabasePathBuilder.swift */,
-				BACEC6C9264FF5020070D31B /* DatabaseEntity.swift */,
-				BACEC6CA264FF5020070D31B /* DocumentReference+Combine.swift */,
-				BACEC6CB264FF5020070D31B /* CollectionReference+Combine.swift */,
-				BACEC6CC264FF5020070D31B /* Database.swift */,
+				BA0071ED26511CDB001DFFCB /* Remote */,
 			);
 			path = Database;
 			sourceTree = "<group>";
