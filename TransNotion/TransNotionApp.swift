@@ -22,7 +22,7 @@ struct TransNotionApp: App {
                         .map({ $0 as? UIWindowScene })
                         .compactMap({ $0 })
                         .flatMap(\.windows)
-                        .first(where: \.isKeyWindow)!
+                        .first(where: \.isKeyWindow)
                 })
         }
     }
