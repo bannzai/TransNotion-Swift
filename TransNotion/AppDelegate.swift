@@ -15,6 +15,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         if !isPreview {
             setupFirebase()
         }
+        
         return true
     }
 }

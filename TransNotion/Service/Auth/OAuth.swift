@@ -81,7 +81,7 @@ extension NotionOAuth {
         case notStableResponse
         case emptyData
     }
-    struct Credential: Codable {
+    struct Credential: Codable, LocalStoreKey {
         let accessToken: String
         let workspaceName: String
         // NOTE: workspaceIcon is exists into document. But exactly not contains in response
