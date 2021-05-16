@@ -19,6 +19,8 @@
 		BA00720226512D63001DFFCB /* ErrorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00720126512D63001DFFCB /* ErrorLogger.swift */; };
 		BA00720B26512E89001DFFCB /* JSONCoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00720A26512E89001DFFCB /* JSONCoder+Extension.swift */; };
 		BA00721D2651C99C001DFFCB /* notion in Frameworks */ = {isa = PBXBuildFile; productRef = BA00721C2651C99C001DFFCB /* notion */; };
+		BA00722C2651C9E6001DFFCB /* PagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00722B2651C9E6001DFFCB /* PagesView.swift */; };
+		BA0072342651CB05001DFFCB /* Environment+notion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0072332651CB05001DFFCB /* Environment+notion.swift */; };
 		BA0B34C4264FA4F100774AA0 /* TransNotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */; };
 		BA0B34C6264FA4F100774AA0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C5264FA4F100774AA0 /* RootView.swift */; };
 		BA0B34C8264FA4F800774AA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0B34C7264FA4F800774AA0 /* Assets.xcassets */; };
@@ -74,6 +76,8 @@
 		BA0071FB26512C9C001DFFCB /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		BA00720126512D63001DFFCB /* ErrorLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLogger.swift; sourceTree = "<group>"; };
 		BA00720A26512E89001DFFCB /* JSONCoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONCoder+Extension.swift"; sourceTree = "<group>"; };
+		BA00722B2651C9E6001DFFCB /* PagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesView.swift; sourceTree = "<group>"; };
+		BA0072332651CB05001DFFCB /* Environment+notion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+notion.swift"; sourceTree = "<group>"; };
 		BA0B34C0264FA4F100774AA0 /* TransNotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransNotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransNotionApp.swift; sourceTree = "<group>"; };
 		BA0B34C5264FA4F100774AA0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				BA0071A726509001001DFFCB /* Environment+Window.swift */,
+				BA0072332651CB05001DFFCB /* Environment+notion.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 		BA0072212651C9B1001DFFCB /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				BA0072292651C9C4001DFFCB /* Pages */,
 				BA0072252651C9B4001DFFCB /* Login */,
 			);
 			path = Domain;
@@ -203,6 +209,14 @@
 				BACEC6C1264FF4B90070D31B /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		BA0072292651C9C4001DFFCB /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				BA00722B2651C9E6001DFFCB /* PagesView.swift */,
+			);
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		BA0B34B7264FA4F100774AA0 = {
@@ -469,6 +483,7 @@
 				BACEC6E1264FF7EB0070D31B /* Color+Extension.swift in Sources */,
 				BACEC6D2264FF5030070D31B /* Database.swift in Sources */,
 				BA00720B26512E89001DFFCB /* JSONCoder+Extension.swift in Sources */,
+				BA0072342651CB05001DFFCB /* Environment+notion.swift in Sources */,
 				BA0071A826509001001DFFCB /* Environment+Window.swift in Sources */,
 				BACEC6CF264FF5030070D31B /* DatabaseEntity.swift in Sources */,
 				BACEC6D0264FF5030070D31B /* DocumentReference+Combine.swift in Sources */,
@@ -485,6 +500,7 @@
 				BAD32BE3264FC50B00DD7824 /* Secret.swift in Sources */,
 				BA0B34C4264FA4F100774AA0 /* TransNotionApp.swift in Sources */,
 				BACEC6D3264FF5030070D31B /* Auth.swift in Sources */,
+				BA00722C2651C9E6001DFFCB /* PagesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
