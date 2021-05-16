@@ -189,6 +189,22 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		BA0072212651C9B1001DFFCB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BA0072252651C9B4001DFFCB /* Login */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BA0072252651C9B4001DFFCB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BACEC6C1264FF4B90070D31B /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		BA0B34B7264FA4F100774AA0 = {
 			isa = PBXGroup;
 			children = (
@@ -225,7 +241,7 @@
 				BAD32C4C264FDDAB00DD7824 /* AppDelegate.swift */,
 				BA0B34C5264FA4F100774AA0 /* RootView.swift */,
 				BACEC6BC264FF4AC0070D31B /* ContentView.swift */,
-				BACEC6C1264FF4B90070D31B /* LoginView.swift */,
+				BA0072212651C9B1001DFFCB /* Domain */,
 				BA0B34C7264FA4F800774AA0 /* Assets.xcassets */,
 				BA00718B26508564001DFFCB /* Debug-Secret.xcconfig */,
 				BA00718926508564001DFFCB /* Debug.xcconfig */,
