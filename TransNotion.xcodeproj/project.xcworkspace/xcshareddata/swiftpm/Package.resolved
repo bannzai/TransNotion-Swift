@@ -92,6 +92,15 @@
         }
       },
       {
+        "package": "notion",
+        "repositoryURL": "git@github.com:noppefoxwolf/notion.git",
+        "state": {
+          "branch": null,
+          "revision": "b90657c73a432f3f3a3191eed6311d2935859861",
+          "version": "0.1.1"
+        }
+      },
+      {
         "package": "Promises",
         "repositoryURL": "https://github.com/google/promises.git",
         "state": {

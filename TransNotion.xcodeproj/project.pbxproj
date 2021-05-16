@@ -18,6 +18,7 @@
 		BA0071FC26512C9C001DFFCB /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0071FB26512C9C001DFFCB /* Credential.swift */; };
 		BA00720226512D63001DFFCB /* ErrorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00720126512D63001DFFCB /* ErrorLogger.swift */; };
 		BA00720B26512E89001DFFCB /* JSONCoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00720A26512E89001DFFCB /* JSONCoder+Extension.swift */; };
+		BA00721D2651C99C001DFFCB /* notion in Frameworks */ = {isa = PBXBuildFile; productRef = BA00721C2651C99C001DFFCB /* notion */; };
 		BA0B34C4264FA4F100774AA0 /* TransNotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */; };
 		BA0B34C6264FA4F100774AA0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C5264FA4F100774AA0 /* RootView.swift */; };
 		BA0B34C8264FA4F800774AA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0B34C7264FA4F800774AA0 /* Assets.xcassets */; };
@@ -114,6 +115,7 @@
 				BAD32C45264FCE5C00DD7824 /* FirebaseAnalyticsSwift-Beta in Frameworks */,
 				BAD32C47264FCE5C00DD7824 /* FirebaseFirestore in Frameworks */,
 				BAD32C41264FCE5C00DD7824 /* FirebaseCrashlytics in Frameworks */,
+				BA00721D2651C99C001DFFCB /* notion in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +322,7 @@
 				BAD32C42264FCE5C00DD7824 /* FirebaseAuth */,
 				BAD32C44264FCE5C00DD7824 /* FirebaseAnalyticsSwift-Beta */,
 				BAD32C46264FCE5C00DD7824 /* FirebaseFirestore */,
+				BA00721C2651C99C001DFFCB /* notion */,
 			);
 			productName = TransNotion;
 			productReference = BA0B34C0264FA4F100774AA0 /* TransNotion.app */;
@@ -395,6 +398,7 @@
 			mainGroup = BA0B34B7264FA4F100774AA0;
 			packageReferences = (
 				BAD32C3D264FCE5C00DD7824 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BA00721B2651C99C001DFFCB /* XCRemoteSwiftPackageReference "notion" */,
 			);
 			productRefGroup = BA0B34C1264FA4F100774AA0 /* Products */;
 			projectDirPath = "";
@@ -802,6 +806,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BA00721B2651C99C001DFFCB /* XCRemoteSwiftPackageReference "notion" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:noppefoxwolf/notion.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
 		BAD32C3D264FCE5C00DD7824 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -813,6 +825,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BA00721C2651C99C001DFFCB /* notion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA00721B2651C99C001DFFCB /* XCRemoteSwiftPackageReference "notion" */;
+			productName = notion;
+		};
 		BAD32C3E264FCE5C00DD7824 /* FirebaseFirestoreSwift-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BAD32C3D264FCE5C00DD7824 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
