@@ -8,23 +8,14 @@
 import SwiftUI
 
 struct RootView: View {
+    @EnvironmentObject var state: TransNotionApp.State
     var body: some View {
-        LoginView()
-            .environmentObject(State())
-    }
-}
-
-extension RootView {
-    final class State: ObservableObject {
-        @Published var isLogin: Bool = {
-           let store = LocalStore<Credentials>()
-            do {
-                let credentials = try store.read()
-                return credentials?.elements.last != nil
-            } catch {
-                return false
-            }
-        }()
+        if state.isLogin {
+            ContentView()
+        } else {
+            LoginView()
+                .environmentObject(state)
+        }
     }
 }
 
