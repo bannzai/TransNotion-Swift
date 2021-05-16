@@ -9,8 +9,14 @@ import SwiftUI
 
 struct RootView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        LoginView()
+            .environmentObject(State())
+    }
+}
+
+extension RootView {
+    final class State: ObservableObject {
+        @Published var isLogin: Bool = false
     }
 }
 
