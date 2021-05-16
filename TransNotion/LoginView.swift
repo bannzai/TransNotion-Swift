@@ -65,13 +65,22 @@ extension LoginView {
                 }, receiveValue: { [weak self] (credential) in
                     print("Success:", credential)
                     self?.credential = credential
+                    self?.store(credential: credential)
                 })
                 .store(in: &cancellables)
         }
-    }
-
-    private func store(credential: Credential) {
         
+        private func store(credential: Credential) {
+            guard var credentials = try? localStore.read() else {
+                return
+            }
+            credentials.elements.append(credential)
+            do {
+                try localStore.write(for: credentials)
+            } catch {
+                errorLogger.record(error: error)
+            }
+        }
     }
 }
 
