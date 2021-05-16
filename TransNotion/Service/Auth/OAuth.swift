@@ -85,7 +85,8 @@ extension NotionOAuth {
         static let jsonDecoder: JSONDecoder = .convertFromSnakeCase
         let accessToken: String
         let workspaceName: String
-        let workspaceIcon: String
+        // NOTE: workspaceIcon is exists into document. But exactly not contains in response
+//        let workspaceIcon: String
         let botId: String
     }
     func requestCredential(code: TemporaryAuthentificationCode) -> AnyPublisher<Credential, Swift.Error> {
@@ -93,6 +94,7 @@ extension NotionOAuth {
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = [
             "Authorization": "Basic \(basicAuthHeader)",
+            "Content-Type": "application/json",
         ]
         request.httpBody = try! JSONEncoder
             .convertToSnakeCase
