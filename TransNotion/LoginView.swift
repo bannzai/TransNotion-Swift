@@ -11,6 +11,7 @@ import Combine
 
 struct LoginView: View {
     @ObservedObject var viewModel: ViewModel = .init()
+    @EnvironmentObject var state: TransNotionApp.State
 
     var body: some View {
         ZStack {
@@ -34,6 +35,9 @@ struct LoginView: View {
                 })
             }
         }
+        .onAppear {
+            viewModel.onAppear(state: state)
+        }
     }
 }
 
@@ -44,6 +48,11 @@ extension LoginView {
         @Published var error: Error?
         var cancellables: [AnyCancellable] = []
         let localStore = LocalStore<Credentials>()
+        @Published var state: TransNotionApp.State!
+        
+        func onAppear(state: TransNotionApp.State) {
+            self.state = state
+        }
 
         func startNotionOAuth() {
             guard let window = keyWindow() else {
