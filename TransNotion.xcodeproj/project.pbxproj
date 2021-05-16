@@ -13,6 +13,7 @@
 		BA00719026508564001DFFCB /* Release-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718C26508564001DFFCB /* Release-Secret.xcconfig */; };
 		BA00719F2650886C001DFFCB /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00719E2650886C001DFFCB /* OAuth.swift */; };
 		BA0071A826509001001DFFCB /* Environment+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0071A726509001001DFFCB /* Environment+Window.swift */; };
+		BA0071E92650A401001DFFCB /* GoogleService-Info-dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAD32C20264FC6E600DD7824 /* GoogleService-Info-dev.plist */; };
 		BA0B34C4264FA4F100774AA0 /* TransNotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */; };
 		BA0B34C6264FA4F100774AA0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C5264FA4F100774AA0 /* RootView.swift */; };
 		BA0B34C8264FA4F800774AA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0B34C7264FA4F800774AA0 /* Assets.xcassets */; };
@@ -368,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA00718D26508564001DFFCB /* Debug.xcconfig in Resources */,
+				BA0071E92650A401001DFFCB /* GoogleService-Info-dev.plist in Resources */,
 				BA0B34CB264FA4F800774AA0 /* Preview Assets.xcassets in Resources */,
 				BACEC6EF264FF9430070D31B /* Localizable.strings in Resources */,
 				BA0B34C8264FA4F800774AA0 /* Assets.xcassets in Resources */,
