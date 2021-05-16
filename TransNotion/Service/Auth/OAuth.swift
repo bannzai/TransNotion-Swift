@@ -9,21 +9,6 @@ import Foundation
 import Combine
 import AuthenticationServices
 
-extension JSONDecoder {
-    static let convertFromSnakeCase: JSONDecoder = {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        return decoder
-    }()
-}
-extension JSONEncoder {
-    static let convertToSnakeCase: JSONEncoder = {
-        let encoder = JSONEncoder()
-        encoder.keyEncodingStrategy = .convertToSnakeCase
-        return encoder
-    }()
-}
-
 private let authorizeURL: URL = URL(string: "https://api.notion.com/v1/oauth/authorize?client_id=\(Secret.notionOAuthClientID)&redirect_uri=\(Secret.notionOAuthRedirectURI)&response_type=code")!
 private let tokenURL: URL = URL(string: "https://api.notion.com/v1/oauth/token")!
 private let basicAuthHeader: String = {
