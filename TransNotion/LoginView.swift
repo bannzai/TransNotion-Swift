@@ -51,17 +51,20 @@ extension LoginView {
             NotionOAuth(window: window)
                 .start()
                 .receive(on: DispatchQueue.main)
-                .sink { [weak self] (completion) in
+                .sink (receiveCompletion: { [weak self] (completion) in
+                    print("Completion:", completion)
                     switch completion {
                     case .failure(let error):
+                        print("Failure:", error)
                         self?.error = error
                         return
                     case .finished:
                         return
                     }
-                } receiveValue: { [weak self] (credential) in
+                }, receiveValue: { [weak self] (credential) in
+                    print("Success:", credential)
                     self?.credential = credential
-                }
+                })
                 .store(in: &cancellables)
         }
     }
