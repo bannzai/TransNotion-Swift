@@ -86,6 +86,7 @@ extension LoginView {
             credentials.elements.append(credential)
             do {
                 try localStore.write(for: credentials)
+                state.isLogin = true
             } catch {
                 errorLogger.record(error: error)
             }
