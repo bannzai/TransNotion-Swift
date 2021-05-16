@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import AuthenticationServices
+import Combine
 
 struct LoginView: View {
+    @ObservedObject var viewModel: ViewModel = .init()
+
     var body: some View {
         ZStack {
             Color.background.edgesIgnoringSafeArea(.all)
@@ -15,7 +19,7 @@ struct LoginView: View {
             VStack {
                 Text("TransNotion").font(.title).foregroundColor(.textColor)
                 Button(action: {
-                    
+                    viewModel.startNotionOAuth()
                 }, label: {
                     HStack {
                         Image("notion_icon")
@@ -29,6 +33,36 @@ struct LoginView: View {
                     .cornerRadius(4)
                 })
             }
+        }
+    }
+}
+
+extension LoginView {
+    class ViewModel: ObservableObject {
+        @Environment(\.keyWindow) var keyWindow
+        @Published var credential: NotionOAuth.Credential?
+        @Published var error: Error?
+        var cancellables: [AnyCancellable] = []
+        
+        func startNotionOAuth() {
+            guard let window = keyWindow() else {
+                fatalError("unexpected window is not found")
+            }
+            NotionOAuth(window: window)
+                .start()
+                .receive(on: DispatchQueue.main)
+                .sink { [weak self] (completion) in
+                    switch completion {
+                    case .failure(let error):
+                        self?.error = error
+                        return
+                    case .finished:
+                        return
+                    }
+                } receiveValue: { [weak self] (credential) in
+                    self?.credential = credential
+                }
+                .store(in: &cancellables)
         }
     }
 }
