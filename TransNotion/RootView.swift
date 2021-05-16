@@ -16,7 +16,15 @@ struct RootView: View {
 
 extension RootView {
     final class State: ObservableObject {
-        @Published var isLogin: Bool = false
+        @Published var isLogin: Bool = {
+           let store = LocalStore<Credentials>()
+            do {
+                let credentials = try store.read()
+                return credentials?.elements.last != nil
+            } catch {
+                return false
+            }
+        }()
     }
 }
 
