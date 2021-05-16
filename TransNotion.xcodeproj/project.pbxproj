@@ -11,6 +11,8 @@
 		BA00718E26508564001DFFCB /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718A26508564001DFFCB /* Release.xcconfig */; };
 		BA00718F26508564001DFFCB /* Debug-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718B26508564001DFFCB /* Debug-Secret.xcconfig */; };
 		BA00719026508564001DFFCB /* Release-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718C26508564001DFFCB /* Release-Secret.xcconfig */; };
+		BA00719F2650886C001DFFCB /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA00719E2650886C001DFFCB /* OAuth.swift */; };
+		BA0071A826509001001DFFCB /* Environment+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0071A726509001001DFFCB /* Environment+Window.swift */; };
 		BA0B34C4264FA4F100774AA0 /* TransNotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */; };
 		BA0B34C6264FA4F100774AA0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B34C5264FA4F100774AA0 /* RootView.swift */; };
 		BA0B34C8264FA4F800774AA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0B34C7264FA4F800774AA0 /* Assets.xcassets */; };
@@ -60,6 +62,8 @@
 		BA00718A26508564001DFFCB /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		BA00718B26508564001DFFCB /* Debug-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Debug-Secret.xcconfig"; sourceTree = "<group>"; };
 		BA00718C26508564001DFFCB /* Release-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Release-Secret.xcconfig"; sourceTree = "<group>"; };
+		BA00719E2650886C001DFFCB /* OAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
+		BA0071A726509001001DFFCB /* Environment+Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+Window.swift"; sourceTree = "<group>"; };
 		BA0B34C0264FA4F100774AA0 /* TransNotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransNotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0B34C3264FA4F100774AA0 /* TransNotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransNotionApp.swift; sourceTree = "<group>"; };
 		BA0B34C5264FA4F100774AA0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -121,6 +125,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA00719D26508863001DFFCB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				BACEC6CD264FF5020070D31B /* Auth.swift */,
+				BA00719E2650886C001DFFCB /* OAuth.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		BA0071A626508FFC001DFFCB /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				BA0071A726509001001DFFCB /* Environment+Window.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
 		BA0B34B7264FA4F100774AA0 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +165,7 @@
 		BA0B34C2264FA4F100774AA0 /* TransNotion */ = {
 			isa = PBXGroup;
 			children = (
+				BA0071A626508FFC001DFFCB /* Environment */,
 				BACEC6DF264FF7E10070D31B /* Style */,
 				BACEC6D7264FF53A0070D31B /* Entity */,
 				BACEC6C6264FF4ED0070D31B /* Service */,
@@ -196,7 +218,7 @@
 		BACEC6C6264FF4ED0070D31B /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				BACEC6CD264FF5020070D31B /* Auth.swift */,
+				BA00719D26508863001DFFCB /* Auth */,
 				BACEC6C7264FF5020070D31B /* Database */,
 			);
 			path = Service;
@@ -379,10 +401,12 @@
 				BACEC6C2264FF4B90070D31B /* LoginView.swift in Sources */,
 				BACEC6E1264FF7EB0070D31B /* Color+Extension.swift in Sources */,
 				BACEC6D2264FF5030070D31B /* Database.swift in Sources */,
+				BA0071A826509001001DFFCB /* Environment+Window.swift in Sources */,
 				BACEC6CF264FF5030070D31B /* DatabaseEntity.swift in Sources */,
 				BACEC6D0264FF5030070D31B /* DocumentReference+Combine.swift in Sources */,
 				BAD32C4D264FDDAB00DD7824 /* AppDelegate.swift in Sources */,
 				BACEC6BD264FF4AC0070D31B /* ContentView.swift in Sources */,
+				BA00719F2650886C001DFFCB /* OAuth.swift in Sources */,
 				BACEC6DB264FF54B0070D31B /* User.swift in Sources */,
 				BACEC6CE264FF5030070D31B /* DatabasePathBuilder.swift in Sources */,
 				BA0B34C6264FA4F100774AA0 /* RootView.swift in Sources */,
