@@ -11,7 +11,16 @@ import SwiftUI
 typealias KeyWindowClosure = () -> UIWindow?
 
 struct KeyWindowKey: EnvironmentKey {
-    static let defaultValue: KeyWindowClosure = { nil }
+    static let defaultValue: KeyWindowClosure = {
+        UIApplication
+            .shared
+            .connectedScenes
+            .filter({ $0.activationState == .foregroundActive })
+            .map({ $0 as? UIWindowScene })
+            .compactMap({ $0 })
+            .flatMap(\.windows)
+            .first(where: \.isKeyWindow)
+    }
 }
 
 extension EnvironmentValues {
