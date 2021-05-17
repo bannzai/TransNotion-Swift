@@ -27,8 +27,19 @@ extension TransNotionApp {
                 let credentials = try store.read()
                 return credentials?.elements.last != nil
             } catch {
+                print(error)
                 return false
             }
         }()
+        var credential: Credential? {
+            let store = LocalStore<Credentials>()
+             do {
+                 let credentials = try store.read()
+                 return credentials?.elements.last
+             } catch {
+                errorLogger.record(error: error)
+                return nil
+             }
+        }
     }
 }
