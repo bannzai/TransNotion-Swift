@@ -10,11 +10,11 @@ import notion
 import SwiftUI
 
 struct NotionAPIClientKey: EnvironmentKey {
-    static let defaultValue: notion.Session? = nil
+    static let defaultValue: notion.Session = .shared
 }
 
 extension EnvironmentValues {
-    var notion: notion.Session? {
+    var notion: notion.Session {
         get {
             self[NotionAPIClientKey.self]
         }
