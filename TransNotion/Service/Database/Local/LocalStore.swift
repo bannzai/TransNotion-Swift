@@ -12,26 +12,23 @@ protocol LocalStoreKey {
 }
 
 extension LocalStoreKey {
-    static var localStoreKey: String { "\(type(of: Self.self))" }
+    static var localStoreKey: String { "local_store_\(type(of: self))" }
 }
 
 struct LocalStore<Coder: Codable & LocalStoreKey> {
-    private var url: URL {
-        let url = FileManager.default.urls(
-            for: .cachesDirectory,
-            in: .userDomainMask
-        ).first!
-        let dataUrl = url.appendingPathComponent("\(type(of: Coder.localStoreKey)).json")
-        return dataUrl
+    func isExists() -> Bool {
+        UserDefaults.standard.dictionaryRepresentation().keys.contains(where: { $0 == Coder.localStoreKey })
     }
     
     func write(for coder: Coder) throws {
         let data = try JSONEncoder().encode(coder)
-        try data.write(to: url)
+        UserDefaults.standard.set(data, forKey: Coder.localStoreKey)
     }
     
     func read() throws -> Coder? {
-        let data = try Data(contentsOf: url)
+        guard let data = UserDefaults.standard.data(forKey: Coder.localStoreKey) else {
+            return nil
+        }
         let decoded = try JSONDecoder().decode(Coder.self, from: data)
         return decoded
     }
