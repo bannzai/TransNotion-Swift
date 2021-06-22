@@ -10,6 +10,7 @@
 		20F7E1162681F65A00F0024A /* NotionWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7E1152681F65A00F0024A /* NotionWebView.swift */; };
 		20F7E1182681FDF400F0024A /* Notion.Object.Page+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7E1172681FDF400F0024A /* Notion.Object.Page+Extension.swift */; };
 		20F7E11A26820EA500F0024A /* NotionWebViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7E11926820EA500F0024A /* NotionWebViewPage.swift */; };
+		20F7E11D2682145A00F0024A /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7E11C2682145A00F0024A /* Placeholder.swift */; };
 		BA00718D26508564001DFFCB /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718926508564001DFFCB /* Debug.xcconfig */; };
 		BA00718E26508564001DFFCB /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718A26508564001DFFCB /* Release.xcconfig */; };
 		BA00718F26508564001DFFCB /* Debug-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718B26508564001DFFCB /* Debug-Secret.xcconfig */; };
@@ -73,6 +74,7 @@
 		20F7E1152681F65A00F0024A /* NotionWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionWebView.swift; sourceTree = "<group>"; };
 		20F7E1172681FDF400F0024A /* Notion.Object.Page+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notion.Object.Page+Extension.swift"; sourceTree = "<group>"; };
 		20F7E11926820EA500F0024A /* NotionWebViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionWebViewPage.swift; sourceTree = "<group>"; };
+		20F7E11C2682145A00F0024A /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 		BA00718926508564001DFFCB /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		BA00718A26508564001DFFCB /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		BA00718B26508564001DFFCB /* Debug-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Debug-Secret.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +157,14 @@
 				20F7E11926820EA500F0024A /* NotionWebViewPage.swift */,
 			);
 			path = NotionWebView;
+			sourceTree = "<group>";
+		};
+		20F7E11B2682145500F0024A /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				20F7E11C2682145A00F0024A /* Placeholder.swift */,
+			);
+			path = Modifier;
 			sourceTree = "<group>";
 		};
 		BA00719D26508863001DFFCB /* Auth */ = {
@@ -262,6 +272,7 @@
 		BA0B34C2264FA4F100774AA0 /* TransNotion */ = {
 			isa = PBXGroup;
 			children = (
+				20F7E11B2682145500F0024A /* Modifier */,
 				BA00720926512E7E001DFFCB /* Extension */,
 				BA0071A626508FFC001DFFCB /* Environment */,
 				BACEC6DF264FF7E10070D31B /* Style */,
@@ -513,6 +524,7 @@
 				BACEC6D2264FF5030070D31B /* Database.swift in Sources */,
 				BA00720B26512E89001DFFCB /* JSONCoder+Extension.swift in Sources */,
 				BA0072342651CB05001DFFCB /* Environment+notion.swift in Sources */,
+				20F7E11D2682145A00F0024A /* Placeholder.swift in Sources */,
 				BA0071A826509001001DFFCB /* Environment+Window.swift in Sources */,
 				BACEC6CF264FF5030070D31B /* DatabaseEntity.swift in Sources */,
 				BACEC6D0264FF5030070D31B /* DocumentReference+Combine.swift in Sources */,

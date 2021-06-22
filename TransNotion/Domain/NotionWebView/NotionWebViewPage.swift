@@ -26,7 +26,8 @@ struct NotionWebViewPage: View {
             .background(Color.black)
             .foregroundColor(.white)
             .cornerRadius(4)
-            
+            .placeholder(when: isLoading)
+
             Spacer().frame(height: 40)
         }
     }
