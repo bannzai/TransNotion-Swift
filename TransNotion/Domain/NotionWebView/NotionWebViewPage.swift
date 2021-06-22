@@ -21,11 +21,8 @@ struct NotionWebViewPage: View {
                 print("TODO: Translate and extract currnet page")
                 print("URL: \(url)", "isLoading: \(isLoading)")
             }
-            .frame(width: 240)
-            .padding(.vertical, 16)
-            .background(Color.black)
-            .foregroundColor(.white)
-            .cornerRadius(4)
+            .buttonStyle(PrimaryButtonStyle(width: 240))
+            .disabled(isLoading)
             .placeholder(when: isLoading)
 
             Spacer().frame(height: 40)
