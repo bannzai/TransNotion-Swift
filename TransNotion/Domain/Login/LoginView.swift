@@ -80,12 +80,18 @@ extension LoginView {
         }
         
         private func store(credential: Credential) {
-            guard var credentials = try? localStore.read() else {
-                return
-            }
-            credentials.elements.append(credential)
             do {
+                var credentials: Credentials
+                switch try localStore.read() {
+                case nil:
+                    credentials = .init(elements: [])
+                case let _credentials?:
+                    credentials = _credentials
+                }
+                
+                credentials.elements.append(credential)
                 try localStore.write(for: credentials)
+                state.isLogin = true
             } catch {
                 errorLogger.record(error: error)
             }
