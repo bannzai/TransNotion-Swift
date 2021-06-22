@@ -9,16 +9,17 @@ import Foundation
 import notion
 
 extension Object.Page {
-    func pageEndpoint() -> String? {
+    private func pageEndpoint() -> String? {
         guard let titleProperty = properties.map(\.value).first(where: { $0.id == "title" }),
               case .title(let titleObject) = titleProperty.type,
               let title = titleObject.first?.plainText else {
             return nil
         }
         
+        let publishedPageID = id.replacingOccurrences(of: "-", with: "")
         var pageEndpoint = title
         pageEndpoint = pageEndpoint.replacingOccurrences(of: " ", with: "-")
-        pageEndpoint += "-" + id
+        pageEndpoint += "-" + publishedPageID
         return pageEndpoint
     }
     
