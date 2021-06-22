@@ -12,6 +12,7 @@ import WebKit
 struct NotionWebView: UIViewRepresentable {
     let url: URL
 
+    @EnvironmentObject var state: TransNotionApp.State
     @ObservedObject var observer: Observer = .init()
 
     func makeUIView(context: Context) -> WKWebView {
@@ -52,7 +53,7 @@ struct NotionWebView: UIViewRepresentable {
     }
 }
 
-private let allowHosts: [String] = ["notion.so"]
+private let allowHosts: [String] = ["www.notion.so", "notion.so"]
 extension NotionWebView.Coordinator: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         guard let url = navigationAction.request.url, let host = url.host, allowHosts.contains(host) else {
