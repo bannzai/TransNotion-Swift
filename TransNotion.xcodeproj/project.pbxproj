@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20F7E1162681F65A00F0024A /* NotionWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7E1152681F65A00F0024A /* NotionWebView.swift */; };
 		BA00718D26508564001DFFCB /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718926508564001DFFCB /* Debug.xcconfig */; };
 		BA00718E26508564001DFFCB /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718A26508564001DFFCB /* Release.xcconfig */; };
 		BA00718F26508564001DFFCB /* Debug-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718B26508564001DFFCB /* Debug-Secret.xcconfig */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20F7E1152681F65A00F0024A /* NotionWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionWebView.swift; sourceTree = "<group>"; };
 		BA00718926508564001DFFCB /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		BA00718A26508564001DFFCB /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		BA00718B26508564001DFFCB /* Debug-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Debug-Secret.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20F7E1142681F64C00F0024A /* NotionWebView */ = {
+			isa = PBXGroup;
+			children = (
+				20F7E1152681F65A00F0024A /* NotionWebView.swift */,
+			);
+			path = NotionWebView;
+			sourceTree = "<group>";
+		};
 		BA00719D26508863001DFFCB /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +209,7 @@
 		BA0072212651C9B1001DFFCB /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				20F7E1142681F64C00F0024A /* NotionWebView */,
 				BA842EBD2651DEF800399BDB /* NotionPage */,
 				BA0072292651C9C4001DFFCB /* NotionPages */,
 				BA0072252651C9B4001DFFCB /* Login */,
@@ -510,6 +521,7 @@
 				BACEC6D1264FF5030070D31B /* CollectionReference+Combine.swift in Sources */,
 				BACEC6DA264FF54B0070D31B /* Me.swift in Sources */,
 				BAD32BE3264FC50B00DD7824 /* Secret.swift in Sources */,
+				20F7E1162681F65A00F0024A /* NotionWebView.swift in Sources */,
 				BA0B34C4264FA4F100774AA0 /* TransNotionApp.swift in Sources */,
 				BACEC6D3264FF5030070D31B /* Auth.swift in Sources */,
 				BA00722C2651C9E6001DFFCB /* NotionPagesView.swift in Sources */,
