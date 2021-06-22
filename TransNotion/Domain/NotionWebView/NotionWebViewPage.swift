@@ -12,23 +12,22 @@ struct NotionWebViewPage: View {
     @State var isLoading = false
 
     var body: some View {
-        ZStack {
+        VStack {
             NotionWebView(url: $url, isLoading: $isLoading)
-            VStack {
-                Spacer()
-
-                Button("Translate this page") {
-                    print("TODO: Translate and extract currnet page")
-                    print("URL: \(url)", "isLoading: \(isLoading)")
-                }
-                .frame(width: 240)
-                .padding(.vertical, 16)
-                .background(Color.black)
-                .foregroundColor(.white)
-                .cornerRadius(4)
-
-                Spacer().frame(height: 40)
+            
+            Spacer()
+            
+            Button("Translate this page") {
+                print("TODO: Translate and extract currnet page")
+                print("URL: \(url)", "isLoading: \(isLoading)")
             }
+            .frame(width: 240)
+            .padding(.vertical, 16)
+            .background(Color.black)
+            .foregroundColor(.white)
+            .cornerRadius(4)
+            
+            Spacer().frame(height: 40)
         }
     }
 }
