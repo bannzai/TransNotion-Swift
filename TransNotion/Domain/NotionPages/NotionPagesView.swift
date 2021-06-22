@@ -17,6 +17,7 @@ struct NotionPagesView: View {
 
     @ObservedObject var viewModel: ViewModel = .init()
     @State var url: URLContainer?
+
     var body: some View {
         NavigationView {
             List {
