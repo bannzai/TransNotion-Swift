@@ -23,7 +23,7 @@ struct NotionPagesView: View {
             List {
                 ForEach(viewModel.pages) { (page) in
                     Button(action: {
-                        if let url = page.pageURL() {
+                        if let url = page.base.pageURL() {
                             self.url = .init(url: url)
                         }
                     }, label: {
@@ -50,21 +50,44 @@ struct NotionPagesView: View {
 extension NotionPagesView {
     final class ViewModel: ObservableObject {
         @Environment(\.notion) private var session
-        @Published var pages: [Object.Page] = []
+        @Published var pages: [Page] = []
         @Published var error: Swift.Error?
         var cancellables: [AnyCancellable] = []
+        
+        struct Page: Identifiable {
+            var id: String { base.id }
+            let base: Object.Page
+            var children: [Page] = []
+            init(base: Object.Page) {
+                self.base = base
+            }
+        }
         
         func fetchPages() {
             session.send(V1.Search.Search(query: "")).sink { [weak self] result in
                 switch result {
                 case let .success(response):
-                    self?.pages = response.results.compactMap {
+                    let notionPages: [Object.Page] = response.results.compactMap {
                         if case let .page(page) = $0.object {
                             return page
                         } else {
+                            print("[INFO]", $0.object)
                             return nil
                         }
                     }
+                    var pages: [Page] = notionPages.map(Page.init(base:))
+                    for pageIndex in pages.indices {
+                        for notionPage in notionPages {
+                            if case let .pageId(notionPageID) = notionPage.parent.type {
+                                var page = pages[pageIndex]
+                                if page.id == notionPageID {
+                                    page.children.append(Page(base: notionPage))
+                                    pages[pageIndex] = page
+                                }
+                            }
+                        }
+                    }
+                    self?.pages = pages
                 case let .failure(error):
                     self?.error = error
                 }
