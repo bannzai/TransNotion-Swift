@@ -15,8 +15,10 @@ struct NotionPagesView: View {
         NavigationView {
             List {
                 ForEach(viewModel.pages) { (page) in
-                    NavigationLink(destination: NotionPageView(viewModel: .init(id: page.id))) {
-                        Text(page.retrieveTitle() ?? page.id)
+                    NavigationLink(destination: NotionWebView(url: page.pageURL()!)) {
+                        VStack {
+                            Text(page.id)
+                        }
                     }
                 }
             }.listStyle(InsetGroupedListStyle())
