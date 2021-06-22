@@ -10,19 +10,30 @@ import Combine
 import notion
 
 struct NotionPagesView: View {
+    struct URLContainer: Identifiable {
+        let id = UUID()
+        let url: URL
+    }
+
     @ObservedObject var viewModel: ViewModel = .init()
+    @State var url: URLContainer?
     var body: some View {
         NavigationView {
             List {
                 ForEach(viewModel.pages) { (page) in
-                    NavigationLink(destination: NotionWebView(url: page.pageURL()!)) {
-                        VStack {
-                            Text(page.id)
+                    Button(action: {
+                        if let url = page.pageURL() {
+                            self.url = .init(url: url)
                         }
-                    }
+                    }, label: {
+                        Text(page.id)
+                    })
                 }
             }.listStyle(InsetGroupedListStyle())
         }
+        .sheet(item: $url, content: { url in
+            NotionWebView(url: url.url)
+        })
         .alert(isPresented: .init(get: { viewModel.error != nil }, set: { _ in viewModel.error = nil })) {
             Alert(
                 title: Text("Error"),
