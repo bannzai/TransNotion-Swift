@@ -20,16 +20,14 @@ struct NotionPagesView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.topPages) { (page) in
-                    Button(action: {
-                        if let url = page.base.pageURL() {
-                            self.url = .init(url: url)
-                        }
-                    }, label: {
-                        Text(page.id)
-                    })
-                }
+            List(viewModel.topPages, children: \.children) { page in
+                Button(action: {
+                    if let url = page.base.pageURL() {
+                        self.url = .init(url: url)
+                    }
+                }, label: {
+                    Text(page.id)
+                })
             }.listStyle(InsetGroupedListStyle())
         }
         .sheet(item: $url, content: { url in
@@ -50,14 +48,14 @@ struct NotionPagesView: View {
 extension NotionPagesView {
     final class ViewModel: ObservableObject {
         @Environment(\.notion) private var session
-        @Published var topPages: [TopPage] = []
+        @Published var topPages: [Page] = []
         @Published var error: Swift.Error?
         var cancellables: [AnyCancellable] = []
         
-        struct TopPage: Identifiable {
+        struct Page: Identifiable {
             var id: String { base.id }
             let base: Object.Page
-            var children: [TopPage] = []
+            var children: [Page]?
             init(base: Object.Page) {
                 self.base = base
             }
@@ -76,22 +74,24 @@ extension NotionPagesView {
                         }
                     }
 
-                    var topPages: [TopPage] = notionPages.filter { notionPage in
-                        if case .databaseId = notionPage.parent.type {
-                            return true
-                        }
-                        return false
-                    }
-                    .map(TopPage.init(base:))
-                    for topPageIndex in topPages.indices {
+                    var pages: [Page] = notionPages.map(Page.init(base:))
+                    for pageIndex in pages.indices {
                         for notionPage in notionPages {
                             if case let .pageId(notionPageID) = notionPage.parent.type {
-                                var topPage = topPages[topPageIndex]
-                                if topPage.id == notionPageID {
-                                    topPage.children.append(TopPage(base: notionPage))
-                                    topPages[topPageIndex] = topPage
+                                var page = pages[pageIndex]
+                                if page.id == notionPageID {
+                                    page.children?.append(.init(base: notionPage))
+                                    pages[pageIndex] = page
                                 }
                             }
+                        }
+                    }
+                    let topPages = pages.filter { page in
+                        switch page.base.parent.type {
+                        case .databaseId, .workspace:
+                            return true
+                        case .pageId:
+                            return false
                         }
                     }
                     self?.topPages = topPages
