@@ -33,7 +33,7 @@ struct NotionPagesView: View {
             }.listStyle(InsetGroupedListStyle())
         }
         .sheet(item: $url, content: { url in
-            NotionWebView(url: url.url)
+            NotionWebViewPage(url: url.url)
         })
         .alert(isPresented: .init(get: { viewModel.error != nil }, set: { _ in viewModel.error = nil })) {
             Alert(
