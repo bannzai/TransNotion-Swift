@@ -21,14 +21,9 @@ struct NotionPagesView: View {
     var body: some View {
         NavigationView {
             List(viewModel.topPages, children: \.children) { page in
-                Button(action: {
-                    if let url = page.base.pageURL() {
-                        self.url = .init(url: url)
-                    }
-                }, label: {
-                    Text(page.id)
-                })
-            }.listStyle(InsetGroupedListStyle())
+                Image(systemName: "add")
+                Text(page.base.retrieveTitle()!)
+            }
         }
         .sheet(item: $url, content: { url in
             NotionWebViewPage(url: url.url)
@@ -52,7 +47,7 @@ extension NotionPagesView {
         @Published var error: Swift.Error?
         var cancellables: [AnyCancellable] = []
         
-        struct Page: Identifiable {
+        class Page: Identifiable {
             var id: String { base.id }
             let base: Object.Page
             var children: [Page]?
@@ -74,14 +69,15 @@ extension NotionPagesView {
                         }
                     }
 
-                    var pages: [Page] = notionPages.map(Page.init(base:))
-                    for pageIndex in pages.indices {
-                        for notionPage in notionPages {
-                            if case let .pageId(notionPageID) = notionPage.parent.type {
-                                var page = pages[pageIndex]
-                                if page.id == notionPageID {
-                                    page.children?.append(.init(base: notionPage))
-                                    pages[pageIndex] = page
+                    let pages: [Page] = notionPages.map(Page.init(base:))
+                    for page in pages {
+                        for child in pages {
+                            if case let .pageId(parentID) = child.base.parent.type {
+                                if page.id == parentID {
+                                    if page.children == nil {
+                                        page.children = []
+                                    }
+                                    page.children?.append(child)
                                 }
                             }
                         }
