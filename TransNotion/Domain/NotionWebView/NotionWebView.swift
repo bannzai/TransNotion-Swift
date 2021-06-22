@@ -10,7 +10,8 @@ import UIKit
 import WebKit
 
 struct NotionWebView: UIViewRepresentable {
-    let url: URL
+    @Binding var url: URL
+    @Binding var isLoading: Bool
 
     @EnvironmentObject var state: TransNotionApp.State
     @ObservedObject var observer: Observer = .init()
@@ -22,7 +23,19 @@ struct NotionWebView: UIViewRepresentable {
 
         observer.observations.append(
             webView.observe(\.isLoading, changeHandler: { webView, change in
-                webView.isUserInteractionEnabled = !webView.isLoading
+                DispatchQueue.main.async {
+                    isLoading = webView.isLoading
+                    webView.isUserInteractionEnabled = !webView.isLoading
+                }
+            })
+        )
+        observer.observations.append(
+            webView.observe(\.url, changeHandler: { webView, _ in
+                DispatchQueue.main.async {
+                    if let url = webView.url {
+                        self.url = url
+                    }
+                }
             })
         )
 
