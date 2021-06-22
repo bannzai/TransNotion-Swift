@@ -21,7 +21,7 @@ struct NotionPagesView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.pages) { (page) in
+                ForEach(viewModel.topPages) { (page) in
                     Button(action: {
                         if let url = page.base.pageURL() {
                             self.url = .init(url: url)
@@ -50,14 +50,14 @@ struct NotionPagesView: View {
 extension NotionPagesView {
     final class ViewModel: ObservableObject {
         @Environment(\.notion) private var session
-        @Published var pages: [Page] = []
+        @Published var topPages: [TopPage] = []
         @Published var error: Swift.Error?
         var cancellables: [AnyCancellable] = []
         
-        struct Page: Identifiable {
+        struct TopPage: Identifiable {
             var id: String { base.id }
             let base: Object.Page
-            var children: [Page] = []
+            var children: [TopPage] = []
             init(base: Object.Page) {
                 self.base = base
             }
@@ -75,19 +75,26 @@ extension NotionPagesView {
                             return nil
                         }
                     }
-                    var pages: [Page] = notionPages.map(Page.init(base:))
-                    for pageIndex in pages.indices {
+
+                    var topPages: [TopPage] = notionPages.filter { notionPage in
+                        if case .databaseId = notionPage.parent.type {
+                            return true
+                        }
+                        return false
+                    }
+                    .map(TopPage.init(base:))
+                    for topPageIndex in topPages.indices {
                         for notionPage in notionPages {
                             if case let .pageId(notionPageID) = notionPage.parent.type {
-                                var page = pages[pageIndex]
-                                if page.id == notionPageID {
-                                    page.children.append(Page(base: notionPage))
-                                    pages[pageIndex] = page
+                                var topPage = topPages[topPageIndex]
+                                if topPage.id == notionPageID {
+                                    topPage.children.append(TopPage(base: notionPage))
+                                    topPages[topPageIndex] = topPage
                                 }
                             }
                         }
                     }
-                    self?.pages = pages
+                    self?.topPages = topPages
                 case let .failure(error):
                     self?.error = error
                 }
