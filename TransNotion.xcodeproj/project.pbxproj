@@ -199,8 +199,8 @@
 		BA0072212651C9B1001DFFCB /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				BA842EBD2651DEF800399BDB /* Page */,
-				BA0072292651C9C4001DFFCB /* Pages */,
+				BA842EBD2651DEF800399BDB /* NotionPage */,
+				BA0072292651C9C4001DFFCB /* NotionPages */,
 				BA0072252651C9B4001DFFCB /* Login */,
 			);
 			path = Domain;
@@ -214,12 +214,12 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		BA0072292651C9C4001DFFCB /* Pages */ = {
+		BA0072292651C9C4001DFFCB /* NotionPages */ = {
 			isa = PBXGroup;
 			children = (
 				BA00722B2651C9E6001DFFCB /* NotionPagesView.swift */,
 			);
-			path = Pages;
+			path = NotionPages;
 			sourceTree = "<group>";
 		};
 		BA0B34B7264FA4F100774AA0 = {
@@ -296,12 +296,12 @@
 			path = TransNotionUITests;
 			sourceTree = "<group>";
 		};
-		BA842EBD2651DEF800399BDB /* Page */ = {
+		BA842EBD2651DEF800399BDB /* NotionPage */ = {
 			isa = PBXGroup;
 			children = (
 				BA842EBE2651DF0400399BDB /* NotionPage.swift */,
 			);
-			path = Page;
+			path = NotionPage;
 			sourceTree = "<group>";
 		};
 		BACEC6C6264FF4ED0070D31B /* Service */ = {
