@@ -39,6 +39,7 @@ struct NotionPagesView: View {
                     .padding(.horizontal, 20)
                 }
             }
+            .navigationTitle(Text("Notion Pages"))
         }
         .accentColor(.appPrimary)
         .sheet(item: $url, content: { url in
