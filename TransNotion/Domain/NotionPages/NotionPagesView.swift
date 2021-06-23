@@ -29,10 +29,15 @@ struct NotionPagesView: View {
                     })
                 }
                 .listStyle(PlainListStyle())
-                Button("Translate checked page") {
-                    print("TODO: Translate and extract currnet page")
+                Group {
+                    let targetPages = viewModel.targetPages
+                    Button(!targetPages.isEmpty ? "Translate \(targetPages.count) page" : "Check translate target pages") {
+                        print("TODO: Translate and extract currnet page")
+                    }
+                    .disabled(targetPages.isEmpty)
+                    .buttonStyle(PrimaryButtonStyle(width: .infinity))
+                    .padding(.horizontal, 20)
                 }
-                .buttonStyle(PrimaryButtonStyle(width: 240))
             }
         }
         .accentColor(.appPrimary)
@@ -58,7 +63,11 @@ extension NotionPagesView {
         @Published var topPages: [Page] = []
         @Published var error: Swift.Error?
         var cancellables: [AnyCancellable] = []
-        
+        var allPages: [Page] = []
+        var targetPages: [Page] {
+            allPages.filter(\.isChecked)
+        }
+
         class Page: Identifiable {
             var id: String { base.id }
             let base: Object.Page
@@ -88,9 +97,9 @@ extension NotionPagesView {
                         }
                     }
 
-                    let pages: [Page] = notionPages.map(Page.init(base:))
-                    for page in pages {
-                        for child in pages {
+                    let allPages: [Page] = notionPages.map(Page.init(base:))
+                    for page in allPages {
+                        for child in allPages {
                             if case let .pageId(parentID) = child.base.parent.type {
                                 if page.id == parentID {
                                     if page.children == nil {
@@ -101,7 +110,7 @@ extension NotionPagesView {
                             }
                         }
                     }
-                    let topPages = pages.filter { page in
+                    let topPages = allPages.filter { page in
                         switch page.base.parent.type {
                         case .databaseId, .workspace:
                             return true
@@ -109,6 +118,7 @@ extension NotionPagesView {
                             return false
                         }
                     }
+                    self?.allPages = allPages
                     self?.topPages = topPages
                 case let .failure(error):
                     self?.error = error
