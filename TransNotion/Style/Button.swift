@@ -9,7 +9,7 @@ struct PrimaryButtonStyle: ButtonStyle {
             .opacity(configuration.isPressed ? 0.2 : 1.0)
             .frame(width: width)
             .padding(.vertical, 14)
-            .background(isEnabled ? Color.black : Color.black.opacity(0.4))
+            .background(isEnabled ? Color.appPrimary : Color.appPrimary.opacity(0.4))
             .foregroundColor(.white)
             .cornerRadius(4)
     }

@@ -20,12 +20,19 @@ struct NotionPagesView: View {
 
     var body: some View {
         NavigationView {
-            List(viewModel.topPages, children: \.children) { page in
-                Button(action: { url = page.base.pageURL().map(URLContainer.init(url:)) }, label: {
-                    Toggle(page.base.retrieveTitle()!, isOn: .init(get: { page.isChecked }, set: { viewModel.update(for: page, isChecked: $0) }))
-                        .toggleStyle(CheckBoxToggleStyle())
-                        .frame(height: 48)
-                })
+            VStack {
+                List(viewModel.topPages, children: \.children) { page in
+                    Button(action: { url = page.base.pageURL().map(URLContainer.init(url:)) }, label: {
+                        Toggle(page.base.retrieveTitle()!, isOn: .init(get: { page.isChecked }, set: { viewModel.update(for: page, isChecked: $0) }))
+                            .toggleStyle(CheckBoxToggleStyle())
+                            .frame(height: 48)
+                    })
+                }
+                .listStyle(PlainListStyle())
+                Button("Translate checked page") {
+                    print("TODO: Translate and extract currnet page")
+                }
+                .buttonStyle(PrimaryButtonStyle(width: 240))
             }
         }
         .accentColor(.appPrimary)
