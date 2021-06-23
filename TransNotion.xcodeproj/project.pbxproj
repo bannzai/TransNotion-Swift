@@ -12,6 +12,7 @@
 		20F7E11A26820EA500F0024A /* NotionWebViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7E11926820EA500F0024A /* NotionWebViewPage.swift */; };
 		20F7E11D2682145A00F0024A /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7E11C2682145A00F0024A /* Placeholder.swift */; };
 		20F7E1202682287400F0024A /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7E11F2682287400F0024A /* Button.swift */; };
+		20F7E1222682CC5B00F0024A /* Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7E1212682CC5B00F0024A /* Toggle.swift */; };
 		BA00718D26508564001DFFCB /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718926508564001DFFCB /* Debug.xcconfig */; };
 		BA00718E26508564001DFFCB /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718A26508564001DFFCB /* Release.xcconfig */; };
 		BA00718F26508564001DFFCB /* Debug-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA00718B26508564001DFFCB /* Debug-Secret.xcconfig */; };
@@ -77,6 +78,7 @@
 		20F7E11926820EA500F0024A /* NotionWebViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionWebViewPage.swift; sourceTree = "<group>"; };
 		20F7E11C2682145A00F0024A /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 		20F7E11F2682287400F0024A /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		20F7E1212682CC5B00F0024A /* Toggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggle.swift; sourceTree = "<group>"; };
 		BA00718926508564001DFFCB /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		BA00718A26508564001DFFCB /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		BA00718B26508564001DFFCB /* Debug-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Debug-Secret.xcconfig"; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 			children = (
 				BACEC6E0264FF7EB0070D31B /* Color+Extension.swift */,
 				20F7E11F2682287400F0024A /* Button.swift */,
+				20F7E1212682CC5B00F0024A /* Toggle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				BAD32BE3264FC50B00DD7824 /* Secret.swift in Sources */,
 				20F7E1162681F65A00F0024A /* NotionWebView.swift in Sources */,
 				BA0B34C4264FA4F100774AA0 /* TransNotionApp.swift in Sources */,
+				20F7E1222682CC5B00F0024A /* Toggle.swift in Sources */,
 				BACEC6D3264FF5030070D31B /* Auth.swift in Sources */,
 				BA00722C2651C9E6001DFFCB /* NotionPagesView.swift in Sources */,
 			);

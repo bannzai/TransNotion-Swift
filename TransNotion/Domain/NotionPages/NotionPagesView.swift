@@ -17,14 +17,28 @@ struct NotionPagesView: View {
 
     @ObservedObject var viewModel: ViewModel = .init()
     @State var url: URLContainer?
+    @State var isCheckBoxMode: Bool = false
 
     var body: some View {
         NavigationView {
             List(viewModel.topPages, children: \.children) { page in
-                Image(systemName: "add")
-                Text(page.base.retrieveTitle()!)
+                if isCheckBoxMode {
+                    Toggle(page.base.retrieveTitle()!, isOn: .init(get: { page.isChecked }, set: { viewModel.update(for: page, isChecked: $0) }))
+                        .toggleStyle(CheckBoxToggleStyle())
+                        .frame(height: 48)
+                } else {
+                    Text(page.base.retrieveTitle()!).frame(height: 48)
+                }
             }
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { isCheckBoxMode.toggle() }, label:  {
+                        Image(systemName: isCheckBoxMode ? "checkmark.circle" : "checkmark.circle.fill")
+                    })
+                }
+            })
         }
+        .accentColor(.appPrimary)
         .sheet(item: $url, content: { url in
             NotionWebViewPage(url: url.url)
         })
@@ -34,7 +48,8 @@ struct NotionPagesView: View {
                 message: Text(viewModel.error?.localizedDescription ?? ""),
                 dismissButton: Alert.Button.cancel()
             )
-        }.onAppear {
+        }
+        .onAppear {
             viewModel.fetchPages()
         }
     }
@@ -51,11 +66,18 @@ extension NotionPagesView {
             var id: String { base.id }
             let base: Object.Page
             var children: [Page]?
+            var isChecked: Bool = false
             init(base: Object.Page) {
                 self.base = base
             }
         }
         
+        func update(for page: Page, isChecked: Bool) {
+            page.isChecked = isChecked
+            // Call Published
+            topPages = topPages
+        }
+
         func fetchPages() {
             session.send(V1.Search.Search(query: "")).sink { [weak self] result in
                 switch result {
