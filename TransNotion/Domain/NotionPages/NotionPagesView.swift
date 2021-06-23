@@ -21,9 +21,11 @@ struct NotionPagesView: View {
     var body: some View {
         NavigationView {
             List(viewModel.topPages, children: \.children) { page in
-                Toggle(page.base.retrieveTitle()!, isOn: .init(get: { page.isChecked }, set: { viewModel.update(for: page, isChecked: $0) }))
-                    .toggleStyle(CheckBoxToggleStyle())
-                    .frame(height: 48)
+                Button(action: { url = page.base.pageURL().map(URLContainer.init(url:)) }, label: {
+                    Toggle(page.base.retrieveTitle()!, isOn: .init(get: { page.isChecked }, set: { viewModel.update(for: page, isChecked: $0) }))
+                        .toggleStyle(CheckBoxToggleStyle())
+                        .frame(height: 48)
+                })
             }
         }
         .accentColor(.appPrimary)
