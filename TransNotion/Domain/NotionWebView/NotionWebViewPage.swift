@@ -21,7 +21,8 @@ struct NotionWebViewPage: View {
                 print("TODO: Translate and extract currnet page")
                 print("URL: \(url)", "isLoading: \(isLoading)")
             }
-            .buttonStyle(PrimaryButtonStyle(width: 240))
+            .buttonStyle(PrimaryButtonStyle(width: .infinity))
+            .padding(.horizontal, 20)
             .disabled(isLoading)
             .placeholder(when: isLoading)
 
