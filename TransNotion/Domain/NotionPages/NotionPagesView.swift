@@ -95,7 +95,11 @@ extension NotionPagesView {
         
         func duplicate() {
             let targetPage = targetPages.first!
-            session.send(V1.Pages.Create(parent: targetPage.base.parent, properties: targetPage.base.properties, children: targetPage.blocks.map(\.base))).sink { result in
+            var properties: [String: Property.TypeValue] = [:]
+            targetPage.base.properties.forEach { key, value in
+                properties[key] = value.type
+            }
+            session.send(V1.Pages.Create(parameter: .init(parent: targetPage.base.parent, properties: properties, children: targetPage.blocks.map(\.base)))).sink { result in
                 switch result {
                 case .success(let response):
                     print("[INFO]", response)

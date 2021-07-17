@@ -895,7 +895,7 @@
 			repositoryURL = "git@github.com:noppefoxwolf/notion.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.1;
+				minimumVersion = 0.1.2;
 			};
 		};
 		BAD32C3D264FCE5C00DD7824 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
