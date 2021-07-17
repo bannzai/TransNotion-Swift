@@ -32,7 +32,7 @@ struct NotionPagesView: View {
                 Group {
                     let targetPages = viewModel.targetPages
                     Button(!targetPages.isEmpty ? "Translate \(targetPages.count) page" : "Check translate target pages") {
-                        print("TODO: Translate and extract currnet page")
+                        viewModel.duplicate()
                     }
                     .disabled(targetPages.isEmpty)
                     .buttonStyle(PrimaryButtonStyle(width: .infinity))
@@ -69,10 +69,18 @@ extension NotionPagesView {
             allPages.filter(\.isChecked)
         }
 
+        class Block: Identifiable {
+            var id: String { base.id }
+            let base: Object.Block
+            init(base: Object.Block) {
+                self.base = base
+            }
+        }
         class Page: Identifiable {
             var id: String { base.id }
             let base: Object.Page
             var children: [Page]?
+            var blocks: [Block] = []
             var isChecked: Bool = false
             init(base: Object.Page) {
                 self.base = base
@@ -84,6 +92,18 @@ extension NotionPagesView {
             // Call Published
             topPages = topPages
         }
+        
+        func duplicate() {
+            let targetPage = targetPages.first!
+            session.send(V1.Pages.Create(parent: targetPage.base.parent, properties: targetPage.base.properties, children: targetPage.blocks.map(\.base))).sink { result in
+                switch result {
+                case .success(let response):
+                    print("[INFO]", response)
+                case .failure(let error):
+                    print("[ERROR]", error)
+                }
+            }.store(in: &cancellables)
+        }
 
         func fetchPages() {
             session.send(V1.Search.Search(query: "")).sink { [weak self] result in
@@ -91,6 +111,7 @@ extension NotionPagesView {
                 case let .success(response):
                     let notionPages: [Object.Page] = response.results.compactMap {
                         if case let .page(page) = $0.object {
+                            print("[INFO]", "page: ", page)
                             return page
                         } else {
                             print("[INFO]", $0.object)
@@ -110,6 +131,8 @@ extension NotionPagesView {
                                 }
                             }
                         }
+                        
+                        self?.fetchBlocks(page: page)
                     }
                     let topPages = allPages.filter { page in
                         switch page.base.parent.type {
@@ -119,12 +142,40 @@ extension NotionPagesView {
                             return false
                         }
                     }
+                    topPages.forEach {
+                        self?.debug(pageID: $0.id, title: $0.base.retrieveTitle()!)
+                    }
                     self?.allPages = allPages
                     self?.topPages = topPages
                 case let .failure(error):
                     self?.error = error
                 }
             }.store(in: &cancellables)
+        }
+        
+        func fetchBlocks(page: Page) {
+            session.send(V1.Blocks.Children.init(id: page.id)).sink { result in
+                switch result {
+                case .success(let response):
+                    print("[INFO]", response)
+                    page.blocks.append(contentsOf: response.results.map(Block.init(base:)))
+                case .failure(let error):
+                    print("[ERROR]", error)
+                }
+            }.store(in: &cancellables)
+        }
+        
+        func debug(pageID: String, title: String) {
+            session.send(V1.Blocks.Children(id: pageID))
+                .sink { result in
+                    switch result {
+                    case .success(let response):
+                        print("[INFO]", "pageID: ", pageID, "title: ", title)
+                        print("[INFO]", response.results)
+                    case .failure(let error):
+                        print("[ERROR]", error)
+                    }
+                }.store(in: &cancellables)
         }
 
     }
